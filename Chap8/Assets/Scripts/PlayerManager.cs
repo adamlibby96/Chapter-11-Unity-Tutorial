@@ -29,16 +29,6 @@ public class PlayerManager : MonoBehaviour, IGameManager {
             health = 0;
         }
 
-        Debug.Log("Health: " + health + "/" + maxHealth);
+        Messenger.Broadcast(GameEvent.HEALTH_UPDATED);
     }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
